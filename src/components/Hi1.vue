@@ -1,6 +1,6 @@
 <template>
     <div class="hi1">
-        {{msg}}
+        {{msg}} - {{$route.params.username}} -- {{$route.params.id}}
     </div>
 </template>
 
