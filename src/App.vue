@@ -11,7 +11,10 @@
             <router-link to="/lidonghui">lidonghui</router-link> |
         </div>
         <p>{{ $route.name }}</p>
-        <router-view/>
+
+        <transition name="fade" mode="out-in">
+            <router-view/>
+        </transition>
     </div>
 </template>
 
@@ -25,4 +28,27 @@
     #app .nav-home {
         margin-bottom: 100px;
     }
+
+    /*路由过渡动画*/
+    .fade-enter{
+        opacity: 0;
+    }
+    .fade-enter-active{
+        transition: opacity .5s;
+    }
+    .fade-leave{
+        opacity: 1;
+    }
+    .fade-leave-active{
+        opacity: 0;
+        transition: opacity .5s;
+    }
+
+
+
+
+
+
+
+
 </style>
