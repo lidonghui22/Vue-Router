@@ -6,11 +6,13 @@ import Hi1 from '@/components/Hi1'
 import Hi2 from '@/components/Hi2'
 import Hi3 from '@/components/Hi3'
 import Params from '@/components/Params'
+import Error from '@/components/Error'
 
 
 Vue.use(Router)
 
 export default new Router({
+    mode: 'history',        //去掉url的#号
     routes: [
         {
             path: '/',
@@ -50,10 +52,15 @@ export default new Router({
         {
             path: '/goPatams/:newsId/:newsTitle',
             redirect: '/params/:newsId/:newsTitle'
-        },{
+        },
+        {
             path: '/hi3',
             component: Hi3,
             alias: '/lidonghui'
+        },
+        {
+            path: '*',
+            component: Error
         }
     ]
 })
