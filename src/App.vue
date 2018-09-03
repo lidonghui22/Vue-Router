@@ -8,6 +8,7 @@
             <router-link to="/params/1991/lidonghui is  a very good man">Params页面</router-link> |
             <router-link to="/goHome">goHome</router-link> |
             <router-link to="/goPatams/7080/I like vue.js">goParams</router-link> |
+            <router-link to="/lidonghui">lidonghui</router-link> |
         </div>
         <p>{{ $route.name }}</p>
         <router-view/>
