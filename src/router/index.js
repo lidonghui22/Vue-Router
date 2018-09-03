@@ -41,5 +41,13 @@ export default new Router({
             name: 'params',
             component: Params
         },
+        {
+            path: '/goHome',
+            redirect: '/'
+        },
+        {
+            path: '/goPatams/:newsId/:newsTitle',
+            redirect: '/params/:newsId/:newsTitle'
+        }
     ]
 })
