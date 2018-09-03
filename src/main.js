@@ -4,7 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+router.beforeEach((to, from, next) => {
+    console.log(to);
+    console.log(from);
+    next();
+});
 
 /* eslint-disable no-new */
 new Vue({
@@ -12,4 +18,4 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
-})
+});
